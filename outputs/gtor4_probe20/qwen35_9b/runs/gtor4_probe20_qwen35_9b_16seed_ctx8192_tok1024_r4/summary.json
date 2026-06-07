@@ -1,0 +1,44 @@
+{
+  "run_id": "gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4",
+  "total_tasks": 80,
+  "completed_tasks": 80,
+  "successful_tasks": 62,
+  "failed_tasks": 18,
+  "skipped_tasks": 0,
+  "countercase_tasks": 25,
+  "elapsed_sec_total": 2221.5,
+  "methods": {
+    "AgentG": {
+      "tasks": 20,
+      "success": 11,
+      "failed": 9,
+      "skipped": 0,
+      "countercases": 6,
+      "legacy_method": "AgentG"
+    },
+    "BaseCG": {
+      "tasks": 20,
+      "success": 16,
+      "failed": 4,
+      "skipped": 0,
+      "countercases": 6,
+      "legacy_method": "G1"
+    },
+    "BaseG": {
+      "tasks": 20,
+      "success": 19,
+      "failed": 1,
+      "skipped": 0,
+      "countercases": 7,
+      "legacy_method": "G0"
+    },
+    "ITERG": {
+      "tasks": 20,
+      "success": 16,
+      "failed": 4,
+      "skipped": 0,
+      "countercases": 6,
+      "legacy_method": "ITERG"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "methods": [
+    "BaseG"
+  ],
+  "input_methods": [
+    "BaseG"
+  ],
+  "legacy_methods": [
+    "G0"
+  ],
+  "strategies": [
+    "BaseG"
+  ],
+  "max_workers": 1,
+  "parallel": false,
+  "resume": false,
+  "run_id": "20260607_022326",
+  "data_backend": "waFocusedData_joined",
+  "data_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/_wa_focused_adapter_cache/waFocused_clean_main_runner_ready.ndjson",
+  "references_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/_wa_focused_adapter_cache/waFocused_clean_main_references.json",
+  "descriptions_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/_wa_focused_adapter_cache/waFocused_clean_main_descriptions.json",
+  "validator_root": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/_wa_focused_adapter_cache/waFocused_validators",
+  "validator_registry": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/_wa_focused_adapter_cache/waFocused_validators/registry.json",
+  "pids": null,
+  "submission_ids": null
+}

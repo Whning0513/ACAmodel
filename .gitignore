@@ -1,0 +1,11 @@
+logs/
+run/
+scripts/__pycache__/
+
+# Large generated outputs: keep only curated top-level summaries by explicit add.
+outputs/**/_wa_focused_adapter_cache/
+outputs/**/logs/
+outputs/**/runs/*/tasks/
+
+# Local one-off logs
+*.log

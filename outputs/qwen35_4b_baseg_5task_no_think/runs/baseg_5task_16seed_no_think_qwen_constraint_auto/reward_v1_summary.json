@@ -1,0 +1,61 @@
+{
+  "analyzed_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto",
+  "task_count": 5,
+  "row_count": 5,
+  "methods": {
+    "BaseG": {
+      "round_count": 5,
+      "task_count": 5,
+      "invalid_rate": 0,
+      "tier_distribution": {
+        "T0 broken": 5
+      },
+      "Pure@16_task_ratio": 0,
+      "average_hit_rate": 0.0,
+      "average_unique_hit_count": 0,
+      "average_task_latency_sec": 18.36
+    }
+  },
+  "task_summaries": [
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__002576ec6455",
+      "global_pid": "codeforces__cf_1230_A",
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455",
+      "elapsed_sec": 17.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00375773f01f",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00375773f01f",
+      "elapsed_sec": 18.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00379fb3e876",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00379fb3e876",
+      "elapsed_sec": 18.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00685e80e643",
+      "global_pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643",
+      "elapsed_sec": 18.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__0073cf0d3bc4",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__0073cf0d3bc4",
+      "elapsed_sec": 18.6,
+      "round_count": 1
+    }
+  ]
+}

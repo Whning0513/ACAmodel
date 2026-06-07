@@ -1,0 +1,720 @@
+{
+  "analyzed_path": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4",
+  "task_count": 80,
+  "row_count": 118,
+  "methods": {
+    "AgentG": {
+      "round_count": 43,
+      "task_count": 20,
+      "invalid_rate": 0.05,
+      "tier_distribution": {
+        "T0 broken": 31,
+        "T1 invalid": 2,
+        "T2 valid no-hit": 6,
+        "T3 mixed-hit": 1,
+        "T4 pure point": 3
+      },
+      "Pure@16_task_ratio": 0.15,
+      "average_hit_rate": 0.1906,
+      "average_unique_hit_count": 0.45,
+      "average_task_latency_sec": 45.045,
+      "total_task_latency_sec": 900.9,
+      "max_task_latency_sec": 98.6
+    },
+    "BaseCG": {
+      "round_count": 20,
+      "task_count": 20,
+      "invalid_rate": 0,
+      "tier_distribution": {
+        "T0 broken": 10,
+        "T2 valid no-hit": 5,
+        "T3 mixed-hit": 3,
+        "T4 pure point": 1,
+        "T6 pure broad family": 1
+      },
+      "Pure@16_task_ratio": 0.1,
+      "average_hit_rate": 0.1906,
+      "average_unique_hit_count": 2.3,
+      "average_task_latency_sec": 17.44,
+      "total_task_latency_sec": 348.8,
+      "max_task_latency_sec": 42.1
+    },
+    "BaseG": {
+      "round_count": 20,
+      "task_count": 20,
+      "invalid_rate": 0,
+      "tier_distribution": {
+        "T0 broken": 9,
+        "T2 valid no-hit": 4,
+        "T3 mixed-hit": 4,
+        "T6 pure broad family": 3
+      },
+      "Pure@16_task_ratio": 0.15,
+      "average_hit_rate": 0.25,
+      "average_unique_hit_count": 4,
+      "average_task_latency_sec": 20.79,
+      "total_task_latency_sec": 415.8,
+      "max_task_latency_sec": 37.4
+    },
+    "ITERG": {
+      "round_count": 35,
+      "task_count": 20,
+      "invalid_rate": 0,
+      "tier_distribution": {
+        "T0 broken": 10,
+        "T2 valid no-hit": 20,
+        "T3 mixed-hit": 3,
+        "T4 pure point": 1,
+        "T6 pure broad family": 1
+      },
+      "Pure@16_task_ratio": 0.1,
+      "average_hit_rate": 0.1906,
+      "average_unique_hit_count": 2.3,
+      "average_task_latency_sec": 27.8,
+      "total_task_latency_sec": 556.0,
+      "max_task_latency_sec": 165.3
+    }
+  },
+  "task_summaries": [
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__002576ec6455",
+      "global_pid": "codeforces__cf_1230_A",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__002576ec6455",
+      "elapsed_sec": 7.1,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00375773f01f",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00375773f01f",
+      "elapsed_sec": 20.4,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00379fb3e876",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00379fb3e876",
+      "elapsed_sec": 19.4,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00685e80e643",
+      "global_pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00685e80e643",
+      "elapsed_sec": 27.6,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__0073cf0d3bc4",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__0073cf0d3bc4",
+      "elapsed_sec": 68.1,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__007b42817639",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__007b42817639",
+      "elapsed_sec": 68.3,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00873750250e",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00873750250e",
+      "elapsed_sec": 22.7,
+      "round_count": 2
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00948bf2cbb6",
+      "global_pid": "codeforces__cf_12_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00948bf2cbb6",
+      "elapsed_sec": 98.6,
+      "round_count": 2
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__009bbfe1d0fb",
+      "global_pid": "codeforces__cf_1037_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__009bbfe1d0fb",
+      "elapsed_sec": 26.8,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00b41b2438d7",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00b41b2438d7",
+      "elapsed_sec": 68.4,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00c828799f38",
+      "global_pid": "codeforces__cf_1328_F",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38",
+      "elapsed_sec": 25.4,
+      "round_count": 2
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__00ee942db13e",
+      "global_pid": "atcoder__p02603 M-SOLUTIONS Programming Contest 2020 - Road to Millionaire",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00ee942db13e",
+      "elapsed_sec": 32.4,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__012141bcbd6d",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__012141bcbd6d",
+      "elapsed_sec": 69.0,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__01251420ec1b",
+      "global_pid": "aizu__p02257 Prime Numbers",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__01251420ec1b",
+      "elapsed_sec": 56.3,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__012e8f39a642",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__012e8f39a642",
+      "elapsed_sec": 70.1,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__015e765262e3",
+      "global_pid": "atcoder__p03072 AtCoder Beginner Contest 124 - Great Ocean View",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__015e765262e3",
+      "elapsed_sec": 25.2,
+      "round_count": 4
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__016403d6ce05",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__016403d6ce05",
+      "elapsed_sec": 36.5,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__01714efd3335",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__01714efd3335",
+      "elapsed_sec": 82.9,
+      "round_count": 3
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__01843bdac324",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__01843bdac324",
+      "elapsed_sec": 5.7,
+      "round_count": 1
+    },
+    {
+      "method": "AgentG",
+      "candidate_id": "codecontests_incorrect__019ebd1ee1bb",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__019ebd1ee1bb",
+      "elapsed_sec": 70.0,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__002576ec6455",
+      "global_pid": "codeforces__cf_1230_A",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__002576ec6455",
+      "elapsed_sec": 6.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00375773f01f",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00375773f01f",
+      "elapsed_sec": 6.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00379fb3e876",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00379fb3e876",
+      "elapsed_sec": 6.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00685e80e643",
+      "global_pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00685e80e643",
+      "elapsed_sec": 7.0,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__0073cf0d3bc4",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__0073cf0d3bc4",
+      "elapsed_sec": 35.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__007b42817639",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__007b42817639",
+      "elapsed_sec": 42.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00873750250e",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00873750250e",
+      "elapsed_sec": 6.0,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00948bf2cbb6",
+      "global_pid": "codeforces__cf_12_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00948bf2cbb6",
+      "elapsed_sec": 34.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__009bbfe1d0fb",
+      "global_pid": "codeforces__cf_1037_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__009bbfe1d0fb",
+      "elapsed_sec": 4.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00b41b2438d7",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00b41b2438d7",
+      "elapsed_sec": 4.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00c828799f38",
+      "global_pid": "codeforces__cf_1328_F",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00c828799f38",
+      "elapsed_sec": 8.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__00ee942db13e",
+      "global_pid": "atcoder__p02603 M-SOLUTIONS Programming Contest 2020 - Road to Millionaire",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__00ee942db13e",
+      "elapsed_sec": 9.7,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__012141bcbd6d",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__012141bcbd6d",
+      "elapsed_sec": 6.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__01251420ec1b",
+      "global_pid": "aizu__p02257 Prime Numbers",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__01251420ec1b",
+      "elapsed_sec": 29.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__012e8f39a642",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__012e8f39a642",
+      "elapsed_sec": 35.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__015e765262e3",
+      "global_pid": "atcoder__p03072 AtCoder Beginner Contest 124 - Great Ocean View",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__015e765262e3",
+      "elapsed_sec": 7.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__016403d6ce05",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__016403d6ce05",
+      "elapsed_sec": 16.5,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__01714efd3335",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__01714efd3335",
+      "elapsed_sec": 35.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__01843bdac324",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__01843bdac324",
+      "elapsed_sec": 12.0,
+      "round_count": 1
+    },
+    {
+      "method": "BaseCG",
+      "candidate_id": "codecontests_incorrect__019ebd1ee1bb",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseCG/codecontests_incorrect__019ebd1ee1bb",
+      "elapsed_sec": 35.0,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__002576ec6455",
+      "global_pid": "codeforces__cf_1230_A",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__002576ec6455",
+      "elapsed_sec": 11.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00375773f01f",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00375773f01f",
+      "elapsed_sec": 6.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00379fb3e876",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00379fb3e876",
+      "elapsed_sec": 6.3,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00685e80e643",
+      "global_pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00685e80e643",
+      "elapsed_sec": 35.8,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__0073cf0d3bc4",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__0073cf0d3bc4",
+      "elapsed_sec": 36.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__007b42817639",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__007b42817639",
+      "elapsed_sec": 19.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00873750250e",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00873750250e",
+      "elapsed_sec": 6.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00948bf2cbb6",
+      "global_pid": "codeforces__cf_12_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00948bf2cbb6",
+      "elapsed_sec": 36.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__009bbfe1d0fb",
+      "global_pid": "codeforces__cf_1037_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__009bbfe1d0fb",
+      "elapsed_sec": 7.7,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00b41b2438d7",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00b41b2438d7",
+      "elapsed_sec": 37.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00c828799f38",
+      "global_pid": "codeforces__cf_1328_F",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00c828799f38",
+      "elapsed_sec": 36.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__00ee942db13e",
+      "global_pid": "atcoder__p02603 M-SOLUTIONS Programming Contest 2020 - Road to Millionaire",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__00ee942db13e",
+      "elapsed_sec": 8.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__012141bcbd6d",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__012141bcbd6d",
+      "elapsed_sec": 5.4,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__01251420ec1b",
+      "global_pid": "aizu__p02257 Prime Numbers",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__01251420ec1b",
+      "elapsed_sec": 29.1,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__012e8f39a642",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__012e8f39a642",
+      "elapsed_sec": 35.6,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__015e765262e3",
+      "global_pid": "atcoder__p03072 AtCoder Beginner Contest 124 - Great Ocean View",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__015e765262e3",
+      "elapsed_sec": 7.2,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__016403d6ce05",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__016403d6ce05",
+      "elapsed_sec": 35.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__01714efd3335",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__01714efd3335",
+      "elapsed_sec": 35.8,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__01843bdac324",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__01843bdac324",
+      "elapsed_sec": 11.9,
+      "round_count": 1
+    },
+    {
+      "method": "BaseG",
+      "candidate_id": "codecontests_incorrect__019ebd1ee1bb",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/BaseG/codecontests_incorrect__019ebd1ee1bb",
+      "elapsed_sec": 6.9,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__002576ec6455",
+      "global_pid": "codeforces__cf_1230_A",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__002576ec6455",
+      "elapsed_sec": 6.6,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00375773f01f",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00375773f01f",
+      "elapsed_sec": 24.7,
+      "round_count": 4
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00379fb3e876",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00379fb3e876",
+      "elapsed_sec": 25.0,
+      "round_count": 4
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00685e80e643",
+      "global_pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00685e80e643",
+      "elapsed_sec": 6.9,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__0073cf0d3bc4",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__0073cf0d3bc4",
+      "elapsed_sec": 34.9,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__007b42817639",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__007b42817639",
+      "elapsed_sec": 165.3,
+      "round_count": 4
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00873750250e",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00873750250e",
+      "elapsed_sec": 5.9,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00948bf2cbb6",
+      "global_pid": "codeforces__cf_12_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00948bf2cbb6",
+      "elapsed_sec": 34.1,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__009bbfe1d0fb",
+      "global_pid": "codeforces__cf_1037_B",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__009bbfe1d0fb",
+      "elapsed_sec": 4.7,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00b41b2438d7",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00b41b2438d7",
+      "elapsed_sec": 4.1,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00c828799f38",
+      "global_pid": "codeforces__cf_1328_F",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00c828799f38",
+      "elapsed_sec": 8.4,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__00ee942db13e",
+      "global_pid": "atcoder__p02603 M-SOLUTIONS Programming Contest 2020 - Road to Millionaire",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__00ee942db13e",
+      "elapsed_sec": 9.5,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__012141bcbd6d",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__012141bcbd6d",
+      "elapsed_sec": 24.4,
+      "round_count": 4
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__01251420ec1b",
+      "global_pid": "aizu__p02257 Prime Numbers",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__01251420ec1b",
+      "elapsed_sec": 28.6,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__012e8f39a642",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__012e8f39a642",
+      "elapsed_sec": 34.1,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__015e765262e3",
+      "global_pid": "atcoder__p03072 AtCoder Beginner Contest 124 - Great Ocean View",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__015e765262e3",
+      "elapsed_sec": 7.5,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__016403d6ce05",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__016403d6ce05",
+      "elapsed_sec": 16.1,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__01714efd3335",
+      "global_pid": "atcoder__p03150 KEYENCE Programming Contest 2019 - KEYENCE String",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__01714efd3335",
+      "elapsed_sec": 33.9,
+      "round_count": 1
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__01843bdac324",
+      "global_pid": "atcoder__p02975 AtCoder Grand Contest 035 - XOR Circle",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__01843bdac324",
+      "elapsed_sec": 47.4,
+      "round_count": 4
+    },
+    {
+      "method": "ITERG",
+      "candidate_id": "codecontests_incorrect__019ebd1ee1bb",
+      "global_pid": "atcoder__p03986 AtCoder Grand Contest 005 - STring",
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen35_9b/runs/gtor4_probe20_qwen35_9b_16seed_ctx8192_tok1024_r4/tasks/ITERG/codecontests_incorrect__019ebd1ee1bb",
+      "elapsed_sec": 33.9,
+      "round_count": 1
+    }
+  ]
+}

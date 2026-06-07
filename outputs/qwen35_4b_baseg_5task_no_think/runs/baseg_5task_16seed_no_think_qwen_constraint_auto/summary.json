@@ -1,0 +1,20 @@
+{
+  "run_id": "baseg_5task_16seed_no_think_qwen_constraint_auto",
+  "total_tasks": 5,
+  "completed_tasks": 5,
+  "successful_tasks": 3,
+  "failed_tasks": 2,
+  "skipped_tasks": 0,
+  "countercase_tasks": 0,
+  "elapsed_sec_total": 91.8,
+  "methods": {
+    "BaseG": {
+      "tasks": 5,
+      "success": 3,
+      "failed": 2,
+      "skipped": 0,
+      "countercases": 0,
+      "legacy_method": "G0"
+    }
+  }
+}

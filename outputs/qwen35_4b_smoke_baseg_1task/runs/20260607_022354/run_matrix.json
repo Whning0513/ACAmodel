@@ -1,0 +1,25 @@
+[
+  {
+    "input_method": "BaseG",
+    "method": "BaseG",
+    "legacy_method": "G0",
+    "strategy": "BaseG",
+    "submission_id": "codecontests_incorrect__002576ec6455",
+    "pid": "codeforces__cf_1230_A",
+    "status": "success",
+    "resumed": false,
+    "terminated_reason": "generator_extraction_error",
+    "stop_reason": "generator_extraction_error",
+    "countercases": 0,
+    "first_countercase_round": null,
+    "first_countercase_input": null,
+    "iterations": 0,
+    "elapsed_sec": 12.1,
+    "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/runs/20260607_022354/tasks/BaseG/codecontests_incorrect__002576ec6455",
+    "result_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/runs/20260607_022354/tasks/BaseG/codecontests_incorrect__002576ec6455/result.json",
+    "trajectory_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/runs/20260607_022354/tasks/BaseG/codecontests_incorrect__002576ec6455/trajectory.jsonl",
+    "trace_json_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/runs/20260607_022354/tasks/BaseG/codecontests_incorrect__002576ec6455/trace.json",
+    "trace_md_path": "/data/whn/ACA_model/outputs/qwen35_4b_smoke_baseg_1task/runs/20260607_022354/tasks/BaseG/codecontests_incorrect__002576ec6455/trace.md",
+    "error": null
+  }
+]

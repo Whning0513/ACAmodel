@@ -1,0 +1,19 @@
+{
+  "model_alias": "qwen25-coder-7b",
+  "model_key": "qwen25_coder_7b",
+  "preferred_port": 8017,
+  "actual_port": 8017,
+  "gpu_id": 1,
+  "env": "vllm017_full",
+  "service_ok": true,
+  "chat_ok": true,
+  "aca_run_ok": true,
+  "stage": "completed",
+  "run_name": "gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4",
+  "run_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4",
+  "data_base": "/data/whn/ACA/data/waFocusedData_submit_0526_final",
+  "taskset_file": "/data/whn/ACA_model/tasksets/gtor_probe20_ids.txt",
+  "notes": "env=vllm017_full reason=preferred_env_ok",
+  "llm_max_tokens": 1024,
+  "qwen_output_constraint_mode": "auto"
+}

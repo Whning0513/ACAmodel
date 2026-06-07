@@ -1,0 +1,36 @@
+{
+  "run_id": "gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4",
+  "terminated_reasons": {
+    "max_iterations": 19,
+    "api_error": 1,
+    "single_round_complete": 33,
+    "no_inputs_generated": 11,
+    "countercase_found": 7,
+    "stagnation": 9
+  },
+  "failed_tasks": [
+    {
+      "input_method": "AgentG",
+      "method": "AgentG",
+      "legacy_method": "AgentG",
+      "strategy": "AgentG",
+      "submission_id": "codecontests_incorrect__00c828799f38",
+      "pid": "codeforces__cf_1328_F",
+      "status": "failed",
+      "resumed": false,
+      "terminated_reason": "api_error",
+      "stop_reason": "api_error",
+      "countercases": 0,
+      "first_countercase_round": null,
+      "first_countercase_input": null,
+      "iterations": 2,
+      "elapsed_sec": 20.8,
+      "task_dir": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38",
+      "result_path": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38/result.json",
+      "trajectory_path": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38/trajectory.jsonl",
+      "trace_json_path": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38/trace.json",
+      "trace_md_path": "/data/whn/ACA_model/outputs/gtor4_probe20/qwen25_coder_7b/runs/gtor4_probe20_qwen25_coder_7b_16seed_ctx8192_tok1024_r4/tasks/AgentG/codecontests_incorrect__00c828799f38/trace.md",
+      "error": "Error code: 400 - {'error': {'message': \"You passed 7169 input tokens and requested 1024 output tokens. However, the model's context length is only 8192 tokens, resulting in a maximum input length of 7168 tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=7169)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "run_id": "baseg_5task_16seed_no_think_qwen_constraint_auto",
+  "terminated_reasons": {
+    "generator_compile_error": 2,
+    "no_inputs_generated": 3
+  },
+  "failed_tasks": [
+    {
+      "input_method": "BaseG",
+      "method": "BaseG",
+      "legacy_method": "G0",
+      "strategy": "BaseG",
+      "submission_id": "codecontests_incorrect__002576ec6455",
+      "pid": "codeforces__cf_1230_A",
+      "status": "failed",
+      "resumed": false,
+      "terminated_reason": "generator_compile_error",
+      "stop_reason": "generator_compile_error",
+      "countercases": 0,
+      "first_countercase_round": null,
+      "first_countercase_input": null,
+      "iterations": 0,
+      "elapsed_sec": 17.9,
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455",
+      "result_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455/result.json",
+      "trajectory_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455/trajectory.jsonl",
+      "trace_json_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455/trace.json",
+      "trace_md_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__002576ec6455/trace.md",
+      "error": "IndentationError: expected an indented block after function definition on line 4 (generator.py, line 35)"
+    },
+    {
+      "input_method": "BaseG",
+      "method": "BaseG",
+      "legacy_method": "G0",
+      "strategy": "BaseG",
+      "submission_id": "codecontests_incorrect__00685e80e643",
+      "pid": "atcoder__p02537 ACL Beginner Contest - Flat Subsequence",
+      "status": "failed",
+      "resumed": false,
+      "terminated_reason": "generator_compile_error",
+      "stop_reason": "generator_compile_error",
+      "countercases": 0,
+      "first_countercase_round": null,
+      "first_countercase_input": null,
+      "iterations": 0,
+      "elapsed_sec": 18.1,
+      "task_dir": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643",
+      "result_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643/result.json",
+      "trajectory_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643/trajectory.jsonl",
+      "trace_json_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643/trace.json",
+      "trace_md_path": "/data/whn/ACA_model/outputs/qwen35_4b_baseg_5task_no_think/runs/baseg_5task_16seed_no_think_qwen_constraint_auto/tasks/BaseG/codecontests_incorrect__00685e80e643/trace.md",
+      "error": "SyntaxError: '{' was never closed (generator.py, line 45)"
+    }
+  ]
+}
