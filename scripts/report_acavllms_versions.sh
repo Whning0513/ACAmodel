@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPORT="/data/whn/ACA_model/reports/acavllms_versions.md"
-mkdir -p /data/whn/ACA_model/reports /data/whn/tmp/acavllms-pip-cache /data/whn/tmp/acavllms-hf /data/whn/tmp/acavllms-xdg
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+TMP_ROOT="${TMP_ROOT:-/data/whn/tmp}"
+REPORT="$ROOT/reports/acavllms_versions.md"
+mkdir -p "$ROOT/reports" "$TMP_ROOT/acavllms-pip-cache" "$TMP_ROOT/acavllms-hf" "$TMP_ROOT/acavllms-xdg"
 
 source /data/miniconda3/bin/activate ACAvllms
 
-export TMPDIR=/data/whn/tmp
-export PIP_CACHE_DIR=/data/whn/tmp/acavllms-pip-cache
-export HF_HOME=/data/whn/tmp/acavllms-hf
-export XDG_CACHE_HOME=/data/whn/tmp/acavllms-xdg
-export TRANSFORMERS_CACHE=/data/whn/tmp/acavllms-hf/transformers
+export TMPDIR="$TMP_ROOT"
+export PIP_CACHE_DIR="$TMP_ROOT/acavllms-pip-cache"
+export HF_HOME="$TMP_ROOT/acavllms-hf"
+export XDG_CACHE_HOME="$TMP_ROOT/acavllms-xdg"
+export TRANSFORMERS_CACHE="$TMP_ROOT/acavllms-hf/transformers"
 
 unset ALL_PROXY all_proxy HTTPS_PROXY https_proxy HTTP_PROXY http_proxy
 

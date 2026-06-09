@@ -2,9 +2,13 @@
 set -euo pipefail
 
 if [[ $# -ne 3 ]]; then
-  echo "Usage: bash /data/whn/ACA_model/scripts/start_acavllms_vllm.sh <model_alias> <port> <gpu_id>" >&2
+  echo "Usage: bash start_acavllms_vllm.sh <model_alias> <port> <gpu_id>" >&2
   exit 2
 fi
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+TMP_ROOT="${TMP_ROOT:-/data/whn/tmp}"
 
 MODEL_ALIAS="$1"
 PORT="$2"
@@ -13,18 +17,18 @@ GPU_ID="$3"
 case "$MODEL_ALIAS" in
   qwen35-4b)
     MODEL_PATH="/data/LLMs/Qwen3.5-4B"
-    DEFAULT_ENV="vllm017_full"
-    DEFAULT_FALLBACK_ENV="vllm_test_017"
+    DEFAULT_ENV="ACAvllms124"
+    DEFAULT_FALLBACK_ENV="vllm017_full"
     ;;
   qwen35-9b)
     MODEL_PATH="/data/LLMs/Qwen3.5-9B"
-    DEFAULT_ENV="vllm017_full"
-    DEFAULT_FALLBACK_ENV="vllm_test_017"
+    DEFAULT_ENV="ACAvllms124"
+    DEFAULT_FALLBACK_ENV="vllm017_full"
     ;;
   qwen25-coder-7b)
     MODEL_PATH="/data/LLMs/Qwen2.5-Coder-7B-Instruct"
-    DEFAULT_ENV="vllm017_full"
-    DEFAULT_FALLBACK_ENV="vllm_test_017"
+    DEFAULT_ENV="ACAvllms124"
+    DEFAULT_FALLBACK_ENV="vllm017_full"
     ;;
   *)
     echo "Unsupported model alias: $MODEL_ALIAS" >&2
@@ -59,8 +63,8 @@ STARTUP_TIMEOUT_SEC="${STARTUP_TIMEOUT_SEC:-240}"
 PREFERRED_ENV="${VLLM_CONDA_ENV:-$DEFAULT_ENV}"
 FALLBACK_ENV="${VLLM_FALLBACK_CONDA_ENV:-$DEFAULT_FALLBACK_ENV}"
 
-RUN_DIR="/data/whn/ACA_model/run/vllm"
-LOG_DIR="/data/whn/ACA_model/logs/vllm"
+RUN_DIR="$ROOT/run/vllm"
+LOG_DIR="$ROOT/logs/vllm"
 PID_FILE="$RUN_DIR/${MODEL_ALIAS}_${PORT}.pid"
 LOG_FILE="$LOG_DIR/${MODEL_ALIAS}_${PORT}.log"
 
@@ -69,7 +73,7 @@ if ss -ltn "( sport = :$PORT )" | tail -n +2 | grep -q .; then
   exit 1
 fi
 
-mkdir -p "$RUN_DIR" "$LOG_DIR" /data/whn/tmp/acavllms-pip-cache /data/whn/tmp/acavllms-hf /data/whn/tmp/acavllms-xdg
+mkdir -p "$RUN_DIR" "$LOG_DIR" "$TMP_ROOT/acavllms-pip-cache" "$TMP_ROOT/acavllms-hf" "$TMP_ROOT/acavllms-xdg"
 
 export PYTHONNOUSERSITE=1
 if [[ -d /data/package/cuda-12.4 ]]; then
@@ -109,11 +113,11 @@ fi
 
 source /data/miniconda3/bin/activate "$SELECTED_ENV"
 
-export TMPDIR=/data/whn/tmp
-export PIP_CACHE_DIR=/data/whn/tmp/acavllms-pip-cache
-export HF_HOME=/data/whn/tmp/acavllms-hf
-export XDG_CACHE_HOME=/data/whn/tmp/acavllms-xdg
-export TRANSFORMERS_CACHE=/data/whn/tmp/acavllms-hf/transformers
+export TMPDIR="$TMP_ROOT"
+export PIP_CACHE_DIR="$TMP_ROOT/acavllms-pip-cache"
+export HF_HOME="$TMP_ROOT/acavllms-hf"
+export XDG_CACHE_HOME="$TMP_ROOT/acavllms-xdg"
+export TRANSFORMERS_CACHE="$TMP_ROOT/acavllms-hf/transformers"
 
 unset ALL_PROXY all_proxy HTTPS_PROXY https_proxy HTTP_PROXY http_proxy
 

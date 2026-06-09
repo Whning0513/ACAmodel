@@ -2,12 +2,14 @@
 set -euo pipefail
 
 if [[ $# -ne 1 ]]; then
-  echo "Usage: bash /data/whn/ACA_model/scripts/stop_vllm_server.sh <port>" >&2
+  echo "Usage: bash stop_vllm_server.sh <port>" >&2
   exit 2
 fi
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 PORT="$1"
-RUN_DIR="/data/whn/ACA_model/run/vllm"
+RUN_DIR="$ROOT/run/vllm"
 
 shopt -s nullglob
 PID_FILES=("$RUN_DIR"/*_"$PORT".pid)

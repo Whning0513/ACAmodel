@@ -1,0 +1,69 @@
+{
+  "generated_at": "2026-05-26 21:16:37",
+  "wa_focus_version": "0526_final",
+  "source_dataset": "alldata_submit_0526_final",
+  "files": {
+    "waFocusedData_submit_0526_final.ndjson": {
+      "size": 99020727,
+      "sha256": "41a4cdc604b6e556072949faa81f586983ca08595048505fac8903571d754baf",
+      "rows": 21623
+    },
+    "waFocusedData_problem_0526_final.ndjson": {
+      "size": 22906747,
+      "sha256": "440e8451064ed48bfe1df7bcb95deeeea4f62a1f87d8f984d788200fffc83e26",
+      "rows": 1109,
+      "problems_with_submissions": 1109,
+      "problems_without_submissions": 0
+    }
+  },
+  "basic_stats": {
+    "original_submission_count": 21623,
+    "kept_submission_count": 21623,
+    "removed_tle_mle_count": 0,
+    "problem_count": 1109,
+    "problems_with_remaining_submissions": 1109,
+    "problems_without_remaining_submissions": 0
+  },
+  "split_stats": {
+    "kept_main_count": 8236,
+    "kept_easy_count": 9608,
+    "kept_pending_ref_count": 31,
+    "kept_pending_validator_count": 163,
+    "kept_pending_blind_count": 2084,
+    "kept_hard_tail_count": 1501
+  },
+  "label_stats": {
+    "original_ac_count": 2794,
+    "original_wa_count": 18829,
+    "re_to_wa_count": 0,
+    "unknown_label_count": 0,
+    "normalized_ac_count": 2794,
+    "normalized_wa_count": 18829,
+    "normalized_unknown_count": 0
+  },
+  "removal_stats": {
+    "removed_tle_count": 0,
+    "removed_mle_count": 0,
+    "removed_trace_tle_count": 0,
+    "removed_trace_mle_count": 0,
+    "removed_by_field": {},
+    "removed_by_split": {},
+    "removed_entries": []
+  },
+  "validation_results": {
+    "submit_json_parseable": "PASS",
+    "problem_json_parseable": "PASS",
+    "candidate_id_unique": "PASS",
+    "global_pid_unique": "PASS",
+    "global_pid_coverage": "PASS",
+    "no_tle_mle_remaining": "PASS",
+    "re_mapped_to_wa": "PASS",
+    "original_verdict_preserved": "PASS",
+    "main_blind_hackable_false": "PASS",
+    "easy_blind_hackable_true": "PASS",
+    "pending_reason_nonempty": "PASS",
+    "problem_count_1109": "PASS"
+  },
+  "WA_FOCUS_EXPORT_STATUS": "READY",
+  "elapsed_seconds": 2.4
+}

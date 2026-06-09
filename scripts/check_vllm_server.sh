@@ -2,10 +2,11 @@
 set -euo pipefail
 
 if [[ $# -ne 1 ]]; then
-  echo "Usage: bash /data/whn/ACA_model/scripts/check_vllm_server.sh <port>" >&2
+  echo "Usage: bash check_vllm_server.sh <port>" >&2
   exit 2
 fi
 
+TMP_ROOT="${TMP_ROOT:-/data/whn/tmp}"
 PORT="$1"
 HOST="${HOST:-127.0.0.1}"
 API_KEY="${API_KEY:-local-vllm}"
@@ -15,8 +16,9 @@ export PYTHONNOUSERSITE=1
 
 MODELS_JSON="$(curl -fsS -H "Authorization: Bearer $API_KEY" "http://$HOST:$PORT/v1/models")"
 
-TMP_CHAT_REQ="$(mktemp /data/whn/tmp/check_vllm_req.XXXXXX.json)"
-TMP_CHAT_RES="$(mktemp /data/whn/tmp/check_vllm_res.XXXXXX.json)"
+mkdir -p "$TMP_ROOT"
+TMP_CHAT_REQ="$(mktemp "$TMP_ROOT/check_vllm_req.XXXXXX.json")"
+TMP_CHAT_RES="$(mktemp "$TMP_ROOT/check_vllm_res.XXXXXX.json")"
 trap 'rm -f "$TMP_CHAT_REQ" "$TMP_CHAT_RES"' EXIT
 
 MODELS_JSON="$MODELS_JSON" python - <<'PY' >"$TMP_CHAT_REQ"

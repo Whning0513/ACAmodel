@@ -1,11 +1,32 @@
 logs/
 run/
 scripts/__pycache__/
+tests/__pycache__/
+ACA/**/__pycache__/
+.pytest_cache/
+.venv/
+venv/
+env/
+tmp/
+.cache/
+models/
+checkpoints/
+*.tmp
+*.swp
 
 # Large generated outputs: keep only curated top-level summaries by explicit add.
 outputs/**/_wa_focused_adapter_cache/
 outputs/**/logs/
 outputs/**/runs/*/tasks/
+outputs/
+managed_runs/
+reports/probe20_7b9b_flow_cases/
+reports/probe20_7b9b_4method_flow_cases/
+reports/probe20_7b9b_sample_cases/
+reports/probe20_7b9b_case_audit.json
+reports/probe20_7b9b_4method_flow_audit.json
+reports/probe20_7b9b_4method_flow_audit_fresh_20260609.json
+reports/probe20_7b9b_trajectory_flow_audit.json
 
 # Local one-off logs
 *.log

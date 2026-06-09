@@ -10,7 +10,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-ACA_ROOT = Path("/data/whn/ACA")
+ACA_ROOT = Path(__file__).resolve().parents[1] / "ACA"
+if not ACA_ROOT.exists():
+    ACA_ROOT = Path("/data/whn/ACA")
 if str(ACA_ROOT) not in sys.path:
     sys.path.insert(0, str(ACA_ROOT))
 

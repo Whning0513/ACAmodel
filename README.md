@@ -2,6 +2,14 @@
 
 This directory is the working area for the next ACA model-serving steps.
 
+## Handoff docs
+
+For portability and repository handoff, start here:
+
+- `docs/portability_handoff.md`
+- `docs/probe20_reusable_ops_runbook.md`
+- `requirements.txt`
+
 ## Local model sources
 
 These models already exist locally and should be reused instead of downloaded again:
