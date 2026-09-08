@@ -1,128 +1,61 @@
-# ACA_model
+# ACA Model
 
-This directory is the working area for the next ACA model-serving steps.
+ACA Model is a research codebase for studying how language-model agents find faults in competitive-programming submissions. It compares eight test-generation strategies, from single-pass baselines to coverage-guided generators and tool-using feedback agents.
 
-## Handoff docs
+The project focuses on a concrete code-intelligence problem: given a candidate program and a reference implementation, can an agent generate inputs that expose wrong behavior? The repository contains the experiment runner, sandboxed execution and tracing tools, agent implementations, a reproducible task subset, and scripts for running the same study against Qwen models served on local hardware.
 
-For portability and repository handoff, start here:
+## What is implemented
 
-- `docs/portability_handoff.md`
-- `docs/probe20_reusable_ops_runbook.md`
-- `requirements.txt`
+- Eight canonical methods: `Base`, `BaseC`, `ITER`, `Agent`, `BaseG`, `BaseCG`, `ITERG`, and `AgentG`.
+- Sandboxed candidate/reference execution with verdicts, trace coverage, and per-case artifacts.
+- Task-level parallel scheduling, resumable runs, service health checks, and artifact verification.
+- Local OpenAI-compatible model serving workflows for Qwen2.5-Coder and Qwen3.5 through vLLM.
+- Metrics and reports for hit rate, validator coverage, iteration behavior, and generator failures.
 
-## Local model sources
+The current three-model probe and its limitations are recorded in [`reports/gtor4_probe20_three_model_report.md`](reports/gtor4_probe20_three_model_report.md).
 
-These models already exist locally and should be reused instead of downloaded again:
+## Run an experiment
 
-- `/data/LLMs/Qwen3.5-4B`
-- `/data/LLMs/Qwen3.5-9B`
-- `/data/LLMs/Qwen2.5-Coder-7B-Instruct`
-
-## Model links in this workspace
-
-`/data/whn/models/qwen` currently contains symlinks:
-
-- `Qwen3.5-4B -> /data/LLMs/Qwen3.5-4B`
-- `Qwen3.5-9B -> /data/LLMs/Qwen3.5-9B`
-- `Qwen2.5-Coder-7B-Instruct -> /data/LLMs/Qwen2.5-Coder-7B-Instruct`
-
-## vLLM setup
-
-An existing vLLM installation was found here:
-
-- `/data/miniconda3/envs/herald/bin/vllm`
-- Version: `0.7.3`
-
-The local launcher script is:
-
-- `/data/whn/scripts/serve_qwen_vllm.sh`
-
-It prefers `vllm` from `PATH`, and otherwise falls back to:
-
-- `/data/miniconda3/envs/herald/bin/vllm`
-
-## Example: start a local server
-
-Serve `Qwen3.5-4B` on port `8000`:
+Use Python 3.11 for the orchestration environment:
 
 ```bash
-PORT=8000 /data/whn/scripts/serve_qwen_vllm.sh Qwen3.5-4B
-```
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 
-## Client environment
-
-Point ACA scripts to the local OpenAI-compatible endpoint:
-
-```bash
 export LLM_API_BASE=http://127.0.0.1:8000/v1
-export OPENAI_BASE_URL=http://127.0.0.1:8000/v1
 export LLM_API_KEY=local-vllm
-export OPENAI_API_KEY=local-vllm
-export LLM_MODEL=Qwen3.5-4B
+export LLM_MODEL=your-served-model-name
+
+python -m ACA.run_experiment \
+  --methods BaseG BaseCG ITERG AgentG \
+  --data-base ACA/data/waFocusedData_submit_0526_final \
+  --submission-ids "$(paste -sd, tasksets/gtor_probe20_ids.txt)" \
+  --output outputs/probe20
 ```
 
-Relevant ACA code already supports this style of endpoint through env vars such as:
+Model checkpoints and vLLM environments are separate from the Python dependencies above. The repository does not contain model weights.
 
-- `LLM_API_BASE`
-- `OPENAI_BASE_URL`
-- `LLM_MODEL`
+For a managed run that starts the server, checks its identity, watches the process, and verifies the output, see [`docs/probe20_reusable_ops_runbook.md`](docs/probe20_reusable_ops_runbook.md). Machine setup and portability notes live in [`docs/portability_handoff.md`](docs/portability_handoff.md).
 
-## ACAvllms Standard Scripts
+## Repository layout
 
-Standard Qwen serving scripts now live here:
+```text
+ACA/        experiment runner, agents, tracing tools, metrics, and task data
+scripts/    model serving, managed runs, monitoring, and verification
+tasksets/   fixed submission sets used by the reported experiments
+reports/    curated experiment summaries and environment checks
+docs/       reproducibility and machine handoff guides
+tests/      orchestration and artifact-verification tests
+```
 
-- `/data/whn/ACA_model/scripts/start_acavllms_vllm.sh`
-- `/data/whn/ACA_model/scripts/check_vllm_server.sh`
-- `/data/whn/ACA_model/scripts/stop_vllm_server.sh`
-- `/data/whn/ACA_model/scripts/report_acavllms_versions.sh`
+Generated runs, logs, caches, checkpoints, and model files are excluded through `.gitignore`.
 
-Supported aliases:
+## Verification
 
-- `qwen35-4b`
-- `qwen35-9b`
-- `qwen25-coder-7b`
-
-Example flow:
+Install the development requirements and run:
 
 ```bash
-bash /data/whn/ACA_model/scripts/report_acavllms_versions.sh
-bash /data/whn/ACA_model/scripts/start_acavllms_vllm.sh qwen35-4b 8024 1
-bash /data/whn/ACA_model/scripts/check_vllm_server.sh 8024
-bash /data/whn/ACA_model/scripts/stop_vllm_server.sh 8024
+python -m pip install -r requirements-dev.txt
+python -m pytest
 ```
-
-## vLLM Environments
-
-本机有三个 vLLM conda 环境：
-
-| env | vllm | torch | CUDA | 用途 |
-|-----|------|-------|------|------|
-| `herald` | 0.7.3 | — | — | 旧 ACA 实验，勿用于 Qwen3.5 |
-| `ACAvllms` | 0.22.1 | 2.11.0+cu130 | 13.0 | 当前 master env |
-| `vllm017_full` | 0.17.0 | 2.10.0+cu128 | 12.8 | Qwen3.5 最低可用验证，CUDA 12.x |
-
-`vllm017_full` 是唯一 CUDA 12.x 的 Qwen3.5 可用环境。详细 runbook: `/data/whn/ACA_model/docs/qwen35_vllm017_runbook.md`
-
-## Qwen3.5-4B 当前运行实例
-
-| 项目 | 值 |
-|------|-----|
-| env | `vllm017_full` (vllm 0.17.0) |
-| port | 8024 |
-| GPU | 1 |
-| PID | 2693968 |
-| API base | `http://127.0.0.1:8024/v1` |
-
-```bash
-# 验证
-curl -sS -H "Authorization: Bearer local-vllm" http://127.0.0.1:8024/v1/models
-# 停止
-kill $(cat /data/whn/ACA_model/run/vllm/qwen35-4b_8024.pid)
-```
-
-## Notes
-
-- Do not re-download the three Qwen models above.
-- Prefer serving from the existing local model directories.
-- `/tmp` is nearly full on this machine, so temporary files should prefer `/data/whn/tmp`.
-- For ACAvllms work, do not download into `~` or `/home/hengningwang`; use `/data/whn/tmp` caches only.
