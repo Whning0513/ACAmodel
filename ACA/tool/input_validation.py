@@ -144,7 +144,7 @@ def _resolve_validator_path(path_value: Any, registry_path: Path) -> Optional[Pa
 
     basename = Path(raw).name
     hits = _validator_file_index().get(basename, [])
-    return hits[0] if hits else None
+    return hits[0] if len(hits) == 1 else None
 
 
 def _normalize_registry_entry(pid: str, entry: dict[str, Any], registry_path: Path) -> dict[str, Any]:
